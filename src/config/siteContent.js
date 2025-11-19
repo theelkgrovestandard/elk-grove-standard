@@ -60,6 +60,7 @@ const siteContent = {
   },
 
   products: {
+    
     id: "products",
     title: "Full collection",
     subtitle:

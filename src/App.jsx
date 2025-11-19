@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "./components/layout/Layout";
 import Header from "./components/layout/Header";
 import HeroSection from "./components/sections/HeroSection";
+import ProductGrid from "./components/sections/ProductGrid";
 import siteContent from "./config/siteContent";
 import theme from "./config/theme";
-
 function App() {
   const { features, products, contact, story, standard } = siteContent;
   const [showPopularOnly, setShowPopularOnly] = React.useState(true);
@@ -16,6 +16,7 @@ function App() {
     <Layout>
       <Header />
       <HeroSection />
+      <ProductGrid />
 
       {/* Features */}
       <section
