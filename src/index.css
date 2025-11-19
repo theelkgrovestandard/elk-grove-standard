@@ -1,0 +1,355 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #020705;
+  color: #f9fafb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #020705;
+}
+
+/* Layout from Layout.jsx */
+.eg-layout-root {
+  min-height: 100vh;
+  background-color: #020705;
+  color: #f9fafb;
+}
+
+.eg-layout-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 4rem;
+}
+
+/* Header */
+
+.eg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+
+.eg-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.eg-logo-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid #4ade80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.eg-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.eg-brand-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.eg-brand-tagline {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.eg-header-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.eg-nav-link {
+  text-decoration: none;
+  color: #9ca3af;
+}
+
+.eg-nav-link:hover {
+  color: #f9fafb;
+}
+
+.eg-header-social {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.eg-social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #122019;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  text-decoration: none;
+  color: #f9fafb;
+}
+
+.eg-social-icon:hover {
+  border-color: #4ade80;
+}
+
+/* Sections */
+
+.eg-section {
+  padding: 3.5rem 0;
+}
+
+.eg-section-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+}
+
+.eg-section-subtitle {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  max-width: 36rem;
+  margin: 0 0 1.6rem 0;
+}
+
+.eg-text-block {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 40rem;
+}
+
+.eg-body-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+.eg-text-muted {
+  color: #9ca3af;
+}
+
+/* Cards & grids */
+
+.eg-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.eg-card {
+  border-radius: 0.75rem;
+  border: 1px solid #122019;
+  padding: 0.9rem 1rem;
+  background-color: #07130c;
+}
+
+.eg-card-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.eg-card-body {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.eg-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+.eg-product-card {
+  border-radius: 0.85rem;
+  border: 1px solid #122019;
+  background-color: #07130c;
+  padding: 1rem 1.1rem;
+}
+
+.eg-product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  gap: 0.75rem;
+}
+
+.eg-product-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.eg-product-category {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.eg-product-price {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.eg-product-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid #122019;
+  background-color: #020705;
+  margin-bottom: 0.35rem;
+}
+
+.eg-product-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Popular toggle */
+
+.eg-section-header-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.eg-popular-toggle {
+  display: inline-flex;
+  background-color: #020705;
+  border-radius: 999px;
+  border: 1px solid #122019;
+  padding: 0.1rem;
+}
+
+.eg-toggle-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.eg-toggle-btn-active {
+  background-color: #22c55e;
+  color: #020705;
+}
+
+/* Standard section */
+
+.eg-standard-section {
+  border-radius: 1rem;
+}
+
+.eg-standard-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  padding: 1.25rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid #122019;
+  background-color: #050b07;
+}
+
+.eg-standard-text {
+  display: grid;
+  gap: 1rem;
+}
+
+.eg-standard-highlight {
+  border-radius: 0.9rem;
+  border: 1px solid #122019;
+  background-color: #07130c;
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.eg-standard-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #4ade80;
+  color: #bbf7d0;
+}
+
+/* Buttons */
+
+.eg-primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+}
+
+/* Hero tweaks */
+
+#hero {
+  display: grid;
+  gap: 1.3rem;
+  padding: 3.25rem 0;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .eg-header {
+    flex-wrap: wrap;
+  }
+
+  .eg-header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .eg-header-social {
+    order: 2;
+  }
+
+  .eg-section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eg-standard-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .eg-layout-main {
+    padding-inline: 1rem;
+  }
+
+  .eg-section {
+    padding: 2.7rem 0;
+  }
+
+  .eg-section-title {
+    font-size: 1.4rem;
+  }
+}
