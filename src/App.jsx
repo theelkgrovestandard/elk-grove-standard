@@ -1,9 +1,11 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Header from "./components/layout/Header";
 import HeroSection from "./components/sections/HeroSection";
 import ProductGrid from "./components/sections/ProductGrid";
 import BundlesSection from "./components/sections/BundlesSection";
+import ProductPage from "./components/sections/ProductPage";
 import siteContent from "./config/siteContent";
 import theme from "./config/theme";
 
@@ -13,13 +15,24 @@ function App() {
   return (
     <Layout>
       <Header />
-      <HeroSection />
 
-      {/* Products */}
-      <ProductGrid />
+      {/* Route-based main content */}
+      <Routes>
+        {/* Home page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSection />
+              <ProductGrid />
+              <BundlesSection />
+            </>
+          }
+        />
 
-      {/* Bundles */}
-      <BundlesSection />
+        {/* Individual product page */}
+        <Route path="/product/:id" element={<ProductPage />} />
+      </Routes>
 
       {/* Features */}
       <section
@@ -29,13 +42,13 @@ function App() {
       >
         <h2 className="eg-section-title">{features.title}</h2>
         <p className="eg-section-subtitle">{features.subtitle}</p>
-        {features.list?.map((item) => (
-  <div key={item.title} className="eg-feature-item">
-    <h3>{item.title}</h3>
-    <p>{item.description}</p>
-  </div>
-))}
-
+        {Array.isArray(features.list) &&
+          features.list.map((item) => (
+            <div key={item.title} className="eg-feature-item">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
       </section>
 
       {/* Story */}

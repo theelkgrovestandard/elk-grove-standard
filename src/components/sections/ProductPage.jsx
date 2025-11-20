@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { products } from "../../config/product";
 
 export default function ProductPage() {
@@ -8,27 +8,42 @@ export default function ProductPage() {
 
   if (!product) {
     return (
-      <div style={{ padding: "4rem", color: "white" }}>
-        <h1>Product not found</h1>
-      </div>
+      <section className="eg-section" style={{ paddingTop: "6rem" }}>
+        <div style={{ color: "white" }}>
+          <h1 className="eg-section-title">Product not found</h1>
+          <p className="eg-section-subtitle">
+            This piece isn’t live right now.
+          </p>
+          <Link
+            to="/"
+            style={{ color: "#22c55e", marginTop: "1rem", display: "inline-block" }}
+          >
+            ← Back to collection
+          </Link>
+        </div>
+      </section>
     );
   }
 
   return (
     <section className="eg-section" style={{ paddingTop: "6rem" }}>
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-        <img
-          src={product.image}
-          alt={product.name}
-          style={{
-            width: "100%",
-            borderRadius: "1rem",
-            marginBottom: "1.5rem",
-          }}
-        />
+        {product.image && (
+          <img
+            src={product.image}
+            alt={product.name}
+            style={{
+              width: "100%",
+              borderRadius: "1rem",
+              marginBottom: "1.5rem",
+            }}
+          />
+        )}
 
         <h1 className="eg-section-title">{product.name}</h1>
-        <p className="eg-section-subtitle">{product.category}</p>
+        {product.category && (
+          <p className="eg-section-subtitle">{product.category}</p>
+        )}
 
         <p style={{ marginTop: "1rem", color: "#ccc", fontSize: "1rem" }}>
           {product.description}
@@ -38,12 +53,12 @@ export default function ProductPage() {
           {product.price ? `$${product.price}` : "Promo asset"}
         </div>
 
-        {product.sizes && (
+        {product.sizes && product.sizes.length > 0 && (
           <div
             style={{
+              marginTop: "1.5rem",
               display: "flex",
               gap: "0.5rem",
-              marginTop: "1.5rem",
               flexWrap: "wrap",
             }}
           >
@@ -62,19 +77,36 @@ export default function ProductPage() {
           </div>
         )}
 
-        <button
+        <div
           style={{
             marginTop: "2rem",
-            padding: "0.75rem 1.25rem",
-            borderRadius: "999px",
-            border: "none",
-            backgroundColor: "#22c55e",
-            color: "#020705",
-            fontWeight: 600,
+            display: "flex",
+            gap: "1rem",
+            alignItems: "center",
           }}
         >
-          Add to Cart
-        </button>
+          <button
+            type="button"
+            style={{
+              padding: "0.75rem 1.25rem",
+              borderRadius: "999px",
+              border: "none",
+              backgroundColor: "#22c55e",
+              color: "#020705",
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            Add to cart
+          </button>
+
+          <Link
+            to="/"
+            style={{ color: "#9ca3af", fontSize: "0.9rem" }}
+          >
+            Back to collection
+          </Link>
+        </div>
       </div>
     </section>
   );
