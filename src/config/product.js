@@ -1,5 +1,14 @@
 // src/config/product.js
-
+import DigitalMockup from "../assets/products/Digital Assets Mockup_1.jpg";
+import ForestGreenHoodie from "../assets/products/Forest Green Elk Grove Hoodie_1.jpg";
+import CreamHoodie from "../assets/products/Cream Elk Grove Hoodie_1 (1).jpg";
+import LakeTeeFront from "../assets/products/image (13).png";
+import LakeTeeBack from "../assets/products/image (14).png";
+import OakTee from "../assets/products/image (6).png";
+import StagTee from "../assets/products/image (7).png";
+import GlowLogo1 from "../assets/products/image (17).png";
+import GlowLogo2 from "../assets/products/image (18).png";
+import HoodieBack from "../assets/products/back of sweater.jpg";
 export const products = [
   {
     id: "digital-tee-pack",
@@ -7,8 +16,8 @@ export const products = [
     price: 28,
     description:
       "Clean tees featuring the Elk Grove antler marks and wordmark. Temporary mockups for the first drop.",
-    image: "/src/assets/products/Digital Assets Mockup_1.jpg",
-    gallery: ["/src/assets/products/Digital Assets Mockup_1.jpg"],
+    image: DigitalMockup,
+    gallery: [DigitalMockup],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: true,
     category: "shirts",
@@ -20,11 +29,8 @@ export const products = [
     price: 55,
     description:
       "Deep forest green hoodie with the Elk Grove map and stag graphic. Built to be the main rotation hoodie.",
-    image: "/src/assets/products/Forest Green Elk Grove Hoodie_1.jpg",
-    gallery: [
-      "/src/assets/products/Forest Green Elk Grove Hoodie_1.jpg",
-      "/src/assets/products/back of sweater.jpg",
-    ],
+    image: ForestGreenHoodie,
+    gallery: [ForestGreenHoodie, HoodieBack],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: true,
     category: "hoodies",
@@ -36,8 +42,8 @@ export const products = [
     price: 55,
     description:
       "Cream fleece hoodie with the Grove Standard map graphic on the back and antlers on the front.",
-    image: "/src/assets/products/Cream Elk Grove Hoodie_1 (1).jpg",
-    gallery: ["/src/assets/products/Cream Elk Grove Hoodie_1 (1).jpg"],
+    image: CreamHoodie,
+    gallery: [CreamHoodie],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: true,
     category: "hoodies",
@@ -49,11 +55,8 @@ export const products = [
     price: 32,
     description:
       "Light grey tee with the pond, dock, and geese illustration pulled from Elk Grove scenery.",
-    image: "/src/assets/products/image (13).png",
-    gallery: [
-      "/src/assets/products/image (13).png",
-      "/src/assets/products/image (14).png",
-    ],
+    image: LakeTeeFront,
+    gallery: [LakeTeeFront, LakeTeeBack],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: false,
     category: "shirts",
@@ -65,8 +68,8 @@ export const products = [
     price: 30,
     description:
       "White tee featuring the oak-and-antlers emblem – simple, clean, and everyday wearable.",
-    image: "/src/assets/products/image (6).png",
-    gallery: ["/src/assets/products/image (6).png"],
+    image: OakTee,
+    gallery: [OakTee],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: false,
     category: "shirts",
@@ -78,8 +81,8 @@ export const products = [
     price: 30,
     description:
       "Forest green tee with the bold stag silhouette graphic on the chest.",
-    image: "/src/assets/products/image (7).png",
-    gallery: ["/src/assets/products/image (7).png"],
+    image: StagTee,
+    gallery: [StagTee],
     sizes: ["S", "M", "L", "XL", "2XL"],
     featured: false,
     category: "shirts",
@@ -91,11 +94,8 @@ export const products = [
     price: 0,
     description:
       "Digital glow-logo artwork used as brand visuals and backgrounds. Not a physical product.",
-    image: "/src/assets/products/image (17).png",
-    gallery: [
-      "/src/assets/products/image (17).png",
-      "/src/assets/products/image (18).png",
-    ],
+    image: GlowLogo1,
+    gallery: [GlowLogo1, GlowLogo2],
     sizes: [],
     featured: false,
     category: "art",
