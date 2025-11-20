@@ -1,4 +1,11 @@
-export default function ProductGrid() {
+import React from "react";
+import { products } from "../../config/product";
+
+export default function ProductGrid({ onViewDetails }) {
+  const handleView = (product) => {
+    if (onViewDetails) onViewDetails(product);
+  };
+
   return (
     <section className="eg-section" id="products-grid">
       <h2 className="eg-section-title">Shop the collection</h2>
@@ -94,6 +101,7 @@ export default function ProductGrid() {
                 fontWeight: 600,
                 cursor: "pointer",
               }}
+              onClick={() => handleView(product)}
             >
               View details
             </button>

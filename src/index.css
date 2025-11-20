@@ -353,3 +353,261 @@ body {
     font-size: 1.4rem;
   }
 }
+/* Modal */
+
+.eg-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.eg-modal-panel {
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  border-radius: 1rem;
+  border: 1px solid #122019;
+  background-color: #020705;
+  padding: 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  overflow: hidden;
+}
+
+.eg-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eg-modal-title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.eg-modal-close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.eg-modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr);
+  gap: 1rem;
+}
+
+.eg-modal-image-wrap {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #020705;
+  border: 1px solid #122019;
+}
+
+.eg-modal-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.eg-modal-info {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.eg-modal-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eg-modal-price {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.eg-modal-sizes-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.eg-modal-sizes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.eg-size-pill {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #122019;
+  font-size: 0.78rem;
+}
+
+.eg-modal-cta {
+  margin-top: 0.4rem;
+}
+
+/* Cart */
+
+.eg-cart-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  max-width: 85vw;
+  background-color: #020705;
+  border-left: 1px solid #122019;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.6);
+  padding: 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-out;
+  z-index: 40;
+}
+
+.eg-cart-panel--open {
+  transform: translateX(0);
+}
+
+.eg-cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eg-cart-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.eg-cart-close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.eg-cart-empty {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.eg-cart-items {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.eg-cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #122019;
+}
+
+.eg-cart-item-main {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.eg-cart-item-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.eg-cart-item-meta {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.eg-cart-item-price {
+  font-size: 0.9rem;
+}
+
+.eg-cart-item-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.eg-cart-item-controls button {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid #122019;
+  background: #020705;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.eg-cart-footer {
+  border-top: 1px solid #122019;
+  padding-top: 0.6rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.eg-cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.eg-cart-checkout {
+  width: 100%;
+  justify-content: center;
+}
+
+.eg-cart-clear {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Cart floating button */
+
+.eg-cart-fab {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #22c55e;
+  color: #020705;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 45;
+}
+
+.eg-cart-fab-count {
+  min-width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 999px;
+  background-color: #020705;
+  color: #bbf7d0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
