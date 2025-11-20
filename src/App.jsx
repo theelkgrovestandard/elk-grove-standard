@@ -1,3 +1,4 @@
+import BundlesSection from "./components/sections/BundlesSection";
 import React from "react";
 import Layout from "./components/layout/Layout";
 import Header from "./components/layout/Header";
@@ -27,8 +28,24 @@ function App() {
 
   // NEW: product detail + cart state
   const [selectedProduct, setSelectedProduct] = React.useState(null);
-  const [cartItems, setCartItems] = React.useState([]);
+ const [cartItems, setCartItems] = React.useState(() => {
+  if (typeof window === "undefined") return [];
+  try {
+    const stored = window.localStorage.getItem("eg_cart");
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+});
+
   const [isCartOpen, setIsCartOpen] = React.useState(false);
+  React.useEffect(() => {
+  try {
+    window.localStorage.setItem("eg_cart", JSON.stringify(cartItems));
+  } catch {
+    // if anything goes wrong, we just ignore it
+  }
+}, [cartItems]);
 
   const handleViewDetails = (product) => {
     setSelectedProduct(product);
@@ -89,6 +106,7 @@ function App() {
 
       {/* Product grid using real images */}
       <ProductGrid onViewDetails={handleViewDetails} />
+      <BundlesSection onAddToCart={handleAddToCart} />
 
       {/* FEATURES SECTION */}
       {features && (
