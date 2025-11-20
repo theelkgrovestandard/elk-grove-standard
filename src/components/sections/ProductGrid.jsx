@@ -1,11 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { products } from "../../config/product";
 
-export default function ProductGrid({ onViewDetails }) {
-  const handleView = (product) => {
-    if (onViewDetails) onViewDetails(product);
-  };
-
+export default function ProductGrid() {
   return (
     <section className="eg-section" id="products-grid">
       <h2 className="eg-section-title">Shop the collection</h2>
@@ -88,8 +85,8 @@ export default function ProductGrid({ onViewDetails }) {
               </div>
             )}
 
-            <button
-              type="button"
+            <Link
+              to={`/product/${product.id}`}
               style={{
                 marginTop: "0.9rem",
                 padding: "0.55rem 0.9rem",
@@ -100,14 +97,17 @@ export default function ProductGrid({ onViewDetails }) {
                 fontSize: "0.85rem",
                 fontWeight: 600,
                 cursor: "pointer",
+                display: "inline-block",
+                textDecoration: "none",
               }}
-              onClick={() => handleView(product)}
             >
               View details
-            </button>
+            </Link>
           </article>
         ))}
       </div>
     </section>
   );
 }
+
+
