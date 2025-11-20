@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { products } from "../../config/product";
 
-export default function ProductGrid() {
+export default function ProductGrid({ onAddToCart}) {
   return (
     <section className="eg-section" id="products-grid">
       <h2 className="eg-section-title">Shop the collection</h2>
@@ -103,6 +103,31 @@ export default function ProductGrid() {
             >
               View details
             </Link>
+            {onAddToCart && (
+              <button
+                type="button"
+                onClick={() =>
+                  onAddToCart({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    category: product.category,
+                  })
+                }
+                style={{
+                  marginTop: "0.9rem",
+                  padding: "0.55rem 0.9rem",
+                  borderRadius: "999px",
+                  border: "1px solid #374151",
+                  backgroundColor: "transparent",
+                  color: "#e5e7eb",
+                  fontSize: "0.8rem",
+                  cursor: "pointer",
+                }}
+              >
+                Add to cart
+              </button>
+            )}
           </article>
         ))}
       </div>

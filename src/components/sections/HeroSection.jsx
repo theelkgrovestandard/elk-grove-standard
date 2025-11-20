@@ -1,83 +1,68 @@
 import React from "react";
-import siteContent from "../../config/siteContent";
-import theme from "../../config/theme";
 
-const HeroSection = () => {
-  const { hero } = siteContent;
-
+export default function HeroSection() {
   return (
-    <section
-      id={hero.id}
-      style={{
-        padding: "3.25rem 0",
-        display: "grid",
-        gap: "1.3rem",
-      }}
-    >
-      <div
-        style={{
-          fontSize: "0.8rem",
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          color: theme.colors.primarySoft,
-          fontWeight: 600,
-        }}
-      >
-        {hero.eyebrow}
-      </div>
+    <section className="eg-hero">
+      <div className="eg-hero-inner">
+        {/* LEFT: MAIN COPY */}
+        <div className="eg-hero-copy">
+          <div className="eg-hero-pill">Elk Grove • California</div>
+          <h1 className="eg-hero-title">
+            Set your standard.
+            <span className="eg-hero-title-accent">
+              &nbsp;Wear it every day.
+            </span>
+          </h1>
 
-      <h1
-        style={{
-          fontFamily: theme.fonts.heading,
-          fontSize: "2.3rem",
-          lineHeight: 1.1,
-          margin: 0,
-        }}
-      >
-        {hero.title}
-      </h1>
+          <p className="eg-hero-subtitle">
+            Hoodies, tees, and sweats built around Elk Grove. 
+            Quiet pieces with a loud standard: show up for your city, 
+            your people, and yourself.
+          </p>
 
-      <p
-        style={{
-          maxWidth: "36rem",
-          fontSize: "0.98rem",
-          color: theme.colors.textMuted,
-        }}
-      >
-        {hero.subtitle}
-      </p>
+          <div className="eg-hero-cta-row">
+            <a href="#products-grid" className="eg-hero-cta-primary">
+              Shop the collection
+            </a>
+            <a href="#story" className="eg-hero-cta-secondary">
+              Learn the story
+            </a>
+          </div>
 
-      <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
-        <a
-          href={hero.primaryCta.href}
-          style={{
-            padding: "0.65rem 1.3rem",
-            borderRadius: "999px",
-            backgroundColor: theme.colors.primary,
-            color: "#020705",
-            fontSize: "0.9rem",
-            fontWeight: 600,
-            textDecoration: "none",
-          }}
-        >
-          {hero.primaryCta.label}
-        </a>
-        <a
-          href={hero.secondaryCta.href}
-          style={{
-            padding: "0.65rem 1.3rem",
-            borderRadius: "999px",
-            border: `1px solid ${theme.colors.border}`,
-            color: theme.colors.text,
-            fontSize: "0.9rem",
-            textDecoration: "none",
-          }}
-        >
-          {hero.secondaryCta.label}
-        </a>
+          <div className="eg-hero-meta">
+            <span>Heavy rotation ready</span>
+            <span>Designed in Elk Grove</span>
+            <span>Limited first run</span>
+          </div>
+        </div>
+
+        {/* RIGHT: HIGHLIGHT CARD */}
+        <div className="eg-hero-highlight">
+          <div className="eg-hero-card">
+            <div className="eg-hero-card-tag">Drop One</div>
+            <div className="eg-hero-card-title">The Grove Standard Set</div>
+            <p className="eg-hero-card-text">
+              Forest green &amp; cream hoodies paired with core tees. 
+              Built to be your first choice, not your backup.
+            </p>
+
+            <div className="eg-hero-card-row">
+              <div>
+                <div className="eg-hero-card-label">From</div>
+                <div className="eg-hero-card-price">$55</div>
+              </div>
+              <div>
+                <div className="eg-hero-card-label">Pieces</div>
+                <div className="eg-hero-card-pill">Hoodies • Tees • Sweats</div>
+              </div>
+            </div>
+
+            <a href="#bundles" className="eg-hero-card-link">
+              View bundles →
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

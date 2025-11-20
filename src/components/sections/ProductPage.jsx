@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../../config/product";
 
-export default function ProductPage() {
+export default function ProductPage({ onAddToCart }) {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
 
@@ -86,19 +86,28 @@ export default function ProductPage() {
           }}
         >
           <button
-            type="button"
-            style={{
-              padding: "0.75rem 1.25rem",
-              borderRadius: "999px",
-              border: "none",
-              backgroundColor: "#22c55e",
-              color: "#020705",
-              fontWeight: 600,
-              cursor: "pointer",
-            }}
-          >
-            Add to cart
-          </button>
+  type="button"
+  onClick={() =>
+    onAddToCart &&
+    onAddToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      category: product.category,
+    })
+  }
+  style={{
+    padding: "0.75rem 1.25rem",
+    borderRadius: "999px",
+    border: "none",
+    backgroundColor: "#22c55e",
+    color: "#020705",
+    fontWeight: 600,
+    cursor: "pointer",
+  }}
+>
+  Add to cart
+</button>
 
           <Link
             to="/"

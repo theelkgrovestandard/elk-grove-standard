@@ -2,11 +2,12 @@ import React from "react";
 import siteContent from "../../config/siteContent";
 import theme from "../../config/theme";
 
-const Header = () => {
+export default function Header({ cartCount, onOpenCart }) {
   const { brand, nav, social } = siteContent;
 
   return (
     <header className="eg-header">
+      {/* LEFT SIDE: LOGO + BRAND */}
       <div className="eg-header-left">
         <div className="eg-logo-badge">
           <span>{brand.logoText}</span>
@@ -17,6 +18,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* MIDDLE: NAVIGATION */}
       <nav className="eg-header-nav">
         {nav.map((item) => (
           <a key={item.href} href={item.href} className="eg-nav-link">
@@ -25,7 +27,9 @@ const Header = () => {
         ))}
       </nav>
 
-      <div className="eg-header-social">
+      {/* RIGHT SIDE: SOCIALS + CART */}
+      <div className="eg-header-social" style={{ display: "flex", alignItems: "center" }}>
+        
         {social.instagram && (
           <a
             href={social.instagram}
@@ -59,9 +63,27 @@ const Header = () => {
             X
           </a>
         )}
+
+        {/* CART BUTTON */}
+        {onOpenCart && (
+          <button
+            type="button"
+            onClick={onOpenCart}
+            style={{
+              marginLeft: "0.75rem",
+              padding: "0.35rem 0.9rem",
+              borderRadius: "999px",
+              border: "1px solid #374151",
+              background: "transparent",
+              color: "#e5e7eb",
+              fontSize: "0.8rem",
+              cursor: "pointer",
+            }}
+          >
+            Cart{typeof cartCount === "number" ? ` (${cartCount})` : ""}
+          </button>
+        )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

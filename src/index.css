@@ -611,3 +611,245 @@ body {
   justify-content: center;
   font-size: 0.75rem;
 }
+/* HERO SECTION */
+
+.eg-hero {
+  padding: 4.5rem 1.75rem 3.5rem;
+  background: radial-gradient(circle at top left, rgba(34,197,94,0.18), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(15,23,42,0.9), #020617);
+  border-bottom: 1px solid #1f2937;
+}
+
+.eg-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.eg-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eg-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  background-color: rgba(15,23,42,0.9);
+}
+
+.eg-hero-title {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  font-weight: 650;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.eg-hero-title-accent {
+  color: #a7f3d0;
+}
+
+.eg-hero-subtitle {
+  margin: 0.25rem 0 0;
+  color: #9ca3af;
+  font-size: 0.98rem;
+  max-width: 34rem;
+}
+
+.eg-hero-cta-row {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.eg-hero-cta-primary,
+.eg-hero-cta-secondary {
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 550;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.eg-hero-cta-primary {
+  background-color: #22c55e;
+  color: #020617;
+}
+
+.eg-hero-cta-secondary {
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  background: transparent;
+}
+
+.eg-hero-meta {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.eg-hero-meta span {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #111827;
+  background-color: rgba(15,23,42,0.85);
+}
+
+/* HERO RIGHT SIDE */
+
+.eg-hero-highlight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.eg-hero-card {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 1.25rem;
+  border: 1px solid #1f2937;
+  background: radial-gradient(circle at top, rgba(15,23,42,0.9), #020617);
+  padding: 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+}
+
+.eg-hero-card-tag {
+  display: inline-flex;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: rgba(34,197,94,0.12);
+  color: #bbf7d0;
+}
+
+.eg-hero-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.eg-hero-card-text {
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.eg-hero-card-row {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.eg-hero-card-label {
+  color: #6b7280;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eg-hero-card-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.eg-hero-card-pill {
+  margin-top: 0.15rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #374151;
+  color: #d1d5db;
+}
+
+.eg-hero-card-link {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #a7f3d0;
+  text-decoration: none;
+}
+
+/* GENERAL MOBILE TWEAKS */
+
+@media (max-width: 768px) {
+  .eg-hero {
+    padding: 3.2rem 1.25rem 2.7rem;
+  }
+
+  .eg-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .eg-hero-copy {
+    text-align: left;
+  }
+
+  .eg-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .eg-hero-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .eg-hero-cta-row {
+    justify-content: flex-start;
+  }
+
+  .eg-hero-highlight {
+    justify-content: flex-start;
+  }
+
+  .eg-hero-card {
+    max-width: 100%;
+  }
+
+  .eg-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .eg-header-nav {
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
+
+  .eg-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .eg-product-card {
+    padding: 0.9rem;
+  }
+
+  .eg-product-name {
+    font-size: 0.95rem;
+  }
+
+  .eg-product-price {
+    font-size: 0.92rem;
+  }
+}
