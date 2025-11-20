@@ -194,7 +194,7 @@ export default function CartPanel({
                   padding: "0.7rem 0.9rem",
                   borderRadius: "999px",
                   border: "none",
-                  backgroundColor: "#22c55e",
+                  backgroundColor: "#4ade80",
                   color: "#020705",
                   fontWeight: 600,
                   fontSize: "0.9rem",

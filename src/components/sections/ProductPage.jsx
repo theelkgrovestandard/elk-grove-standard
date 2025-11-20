@@ -16,7 +16,7 @@ export default function ProductPage({ onAddToCart }) {
           </p>
           <Link
             to="/"
-            style={{ color: "#22c55e", marginTop: "1rem", display: "inline-block" }}
+            style={{ color: "#4ade80", marginTop: "1rem", display: "inline-block" }}
           >
             ← Back to collection
           </Link>
@@ -68,7 +68,7 @@ export default function ProductPage({ onAddToCart }) {
                 style={{
                   padding: "0.35rem 1rem",
                   borderRadius: "999px",
-                  border: "1px solid #22c55e",
+                  border: "1px solid #4ade80",
                 }}
               >
                 {size}
@@ -100,7 +100,7 @@ export default function ProductPage({ onAddToCart }) {
     padding: "0.75rem 1.25rem",
     borderRadius: "999px",
     border: "none",
-    backgroundColor: "#22c55e",
+    backgroundColor: "#4ade80",
     color: "#020705",
     fontWeight: 600,
     cursor: "pointer",

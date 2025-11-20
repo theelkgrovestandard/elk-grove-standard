@@ -86,7 +86,7 @@ export default function BundlesSection({ onAddToCart }) {
                 padding: "0.5rem 0.9rem",
                 borderRadius: "999px",
                 border: "none",
-                backgroundColor: "#22c55e",
+                backgroundColor: "#4ade80",
                 color: "#020705",
                 fontSize: "0.85rem",
                 fontWeight: 600,

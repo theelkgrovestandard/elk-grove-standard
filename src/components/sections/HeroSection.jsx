@@ -1,4 +1,5 @@
 import React from "react";
+import NeonLogo from "../../assets/branding/elk-grove-logo-neon.png";
 
 export default function HeroSection() {
   return (
@@ -15,8 +16,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="eg-hero-subtitle">
-            Hoodies, tees, and sweats built around Elk Grove. 
-            Quiet pieces with a loud standard: show up for your city, 
+            Hoodies, tees, and sweats built around Elk Grove.
+            Quiet pieces with a loud standard: show up for your city,
             your people, and yourself.
           </p>
 
@@ -36,13 +37,21 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT: HIGHLIGHT CARD */}
+        {/* RIGHT: LOGO + DROP CARD */}
         <div className="eg-hero-highlight">
+          <div className="eg-hero-logo-wrapper">
+            <img
+              src={NeonLogo}
+              alt="The Elk Grove Standard logo"
+              className="eg-hero-logo-image"
+            />
+          </div>
+
           <div className="eg-hero-card">
             <div className="eg-hero-card-tag">Drop One</div>
             <div className="eg-hero-card-title">The Grove Standard Set</div>
             <p className="eg-hero-card-text">
-              Forest green &amp; cream hoodies paired with core tees. 
+              Forest green &amp; cream hoodies paired with core tees.
               Built to be your first choice, not your backup.
             </p>
 
@@ -53,7 +62,9 @@ export default function HeroSection() {
               </div>
               <div>
                 <div className="eg-hero-card-label">Pieces</div>
-                <div className="eg-hero-card-pill">Hoodies • Tees • Sweats</div>
+                <div className="eg-hero-card-pill">
+                  Hoodies • Tees • Sweats
+                </div>
               </div>
             </div>
 
